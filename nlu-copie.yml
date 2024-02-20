@@ -1,0 +1,150 @@
+# version: "3.1"
+
+# nlu:
+# ##SALUTATION INTENT
+# - intent: greet
+#   examples: |
+#     - bonjour
+#     - salut
+#     - coucou
+#     - bonsoir
+#     - hey
+#     - allo
+#     - coucou toi
+#     - salut là-bas
+#     - bien le bonjour
+#     - bonjour tout le monde
+#     - salutations
+#     - hello
+#     - salut comment ça va
+#     - hey, comment ça se passe ?
+#     - salut l'ami
+#     - hé, bonjour
+#     - bonsoir à tous
+#     - bonjour, comment ça marche ici ?
+#     - salut, je besoin d'aide
+#     - coucou, pouvez-vous m'assister ?
+#     - hello, j'ai un problème
+#     - salut, quelqu'un peut m'aider ?
+#     - bonjour, j'ai une question
+#     - salut là-bas, besoin de support
+#     - hey, je suis perdu, pouvez-vous m'orienter ?
+#     - bonjour, j'ai un souci, pouvez-vous aider ?
+#     - salut, j'aurais besoin de quelques informations
+#     - hello, est-ce que quelqu'un peut me guider ?
+#     - bonjour, comment puis-je obtenir de l'aide ?
+#     - salut, je cherche à résoudre un problème
+#     - coucou, y a-t-il quelqu'un disponible pour discuter ?
+#     - bonjour, j'aimerais parler à quelqu'un du service client
+#     - salut, c'est possible d'avoir de l'assistance ici ?
+
+# - intent: goodbye
+#   examples: |
+#     - cu
+#     - good by
+#     - cee you later
+#     - good night
+#     - bye
+#     - goodbye
+#     - have a nice day
+#     - see you around
+#     - bye bye
+#     - see you later
+
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+
+# - intent: sobox_change_password
+#   examples: |
+#     - Comment changer mon mot de passe Sobox Fibre ?
+#     - Quelle est la procédure pour modifier mon mot de passe Sobox ?
+#     - Je veux changer mon mot de passe Sobox Fibre, comment faire ?
+#     - Pouvez-vous m'expliquer comment mettre à jour mon mot de passe Sobox ?
+#     - Changer le mot de passe Sobox, s'il vous plaît.
+#     - J'ai besoin d'aide pour changer mon mot de passe Sobox Fibre.
+#     - Est-ce que vous pouvez me guider sur la façon de changer le mot de passe de ma Sobox ?
+#     - Comment puis-je mettre à jour mon mot de passe pour Sobox Fibre ?
+#     - Quelles étapes dois-je suivre pour changer le mot de passe de ma Sobox ?
+#     - Je ne sais pas comment changer mon mot de passe Sobox, pouvez-vous aider ?
+#     - Mot de passe oublié, comment le réinitialiser pour Sobox Fibre ?
+#     - Besoin d'aide pour changer mon MDP Sobox Fibre.
+#     - Comment on fait pour changer le mot de passe de Sobox ?
+#     - Sobox mot de passe, changement, expliquez-moi.
+#     - MDP Sobox Fibre, modification, guidez-moi, s'il vous plaît.
+#     - Pouvez-vous m'aider à changer mon Sobox mot de passe ?
+#     - Je comprends rien, comment changer ce fichu mot de passe Sobox ?
+#     - SOS mot de passe ! Comment faire pour le changer sur Sobox Fibre ?
+#     - Sobox Fibre, changer le mot de passe, help me!
+#     - Mot de passe oublié Sobox, quelles démarches suivre ?
+#     - Comment réinitialiser le mot de passe de ma Sobox Fibre ?
+#     - Sobox password change, step by step instructions, please.
+#     - Oublié mot de passe, comment puis-je le mettre à jour pour Sobox Fibre ?
+#     - Besoin de changer mon mot de passe sur Sobox, où puis-je le faire ?
+#     - Aidez-moi à changer mon mot de passe Sobox, je suis bloqué.
+#     - Comment changer mon mot de passe sur Sobox Fibre sans problème ?
+#     - J'ai égaré mon mot de passe Sobox, comment le récupérer ?
+#     - Sobox Fibre, mot de passe perdu, que dois-je faire ?
+#     - Guidez-moi pour changer mon mot de passe Sobox, s'il vous plaît.
+#     - Mot de passe oublié sur Sobox Fibre, comment le restaurer ?
+#     - Sobox password update, what's the process?
+#     - Comment mettre à jour mon mot de passe Sobox Fibre en toute sécurité ?
+#     - Sobox Fibre, mot de passe, modification, expliquez simplement.
+

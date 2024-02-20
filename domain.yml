@@ -1,0 +1,169 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thanks
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - sobox_change_password
+  - sobox_fibre_description
+  - sobox_fibre_offres
+  - sobox_fibre_souscription
+  - sobox_fibre_installation
+  - sobox_fibre_configuration
+  - sobox_fibre_difference_sobox_fixe
+  - sobox_fibre_vitesse_connexion
+  - sobox_fibre_fonctionnalites
+  - sobox_fibre_eligibilite
+  - dissatisfaction_feedback
+  - probleme_internet
+  - probleme_internet_sobox
+  - probleme_internet_mobile
+  - informer_offre
+  - faq:
+      is_retrieval_intent: true
+
+# Definition des entites
+entities:
+  - offre
+
+# definition des slots (info en memoire)
+slots:
+  offre:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: offre
+
+forms:
+  form_offre:
+    required_slots:
+    - offre
+
+actions:
+  - action_extract_offre_entity
+
+responses:
+  utter_greet:
+  - text: "Bonjour !"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "J'espere que cette reponse vous a ete utile."
+
+  utter_that_helped:
+  - text: "Je suis vraiment heureux de vous avoir aider ! Avez vous d'autres questions ?"
+
+  utter_that_not_helped:
+  - text: "Je suis vraiment desole. Aimeriez-vous entrer en contact avec un de nos agents pour plus
+          details ? "
+
+  utter_no_questions:
+  - text: "D'accord je vous remercie !"
+
+  utter_has_questions:
+  - text: "D'accord. Que aimeriez-vous savoir ?"
+
+  utter_thanks:
+  - text: "Merci. C'est un plaisir de vous aider."
+
+  utter_rephrase:
+  - text: "Je suis désolé, je n'ai pas bien compris. Pourriez-vous reformuler ?"
+
+  utter_default:
+  - text: Désolé, je n'ai pas compris. Pouvez-vous reformuler ?
+
+
+  utter_happy:
+  - text: "Tres bien alors."
+
+  utter_ask_for_help:
+  - text: "Je suis votre assisant virtuel pour les offres internet d'Orange. Comment puis-je vous aider ?"
+
+  utter_goodbye:
+  - text: "Bye. Merci de m'avoir contacte"
+
+  utter_iamabot:
+  - text: "Je suis Coulby. Votre assistant virtuel pour les services internet d'Orange."
+
+  utter_faq/sobox_change_password:
+  - text: |
+       Pour changer le mot de passe du Wi-fi de votre So'Box, accédez à l'interface de votre So'Box via l'url suivante  http://192.168.1.1
+        et connectez vous avec vos identifiants  d'administration (inscrits sur la boîte de la So'Box, si vous ne les avez pas encore modifié). 
+       Le mot de passe du Wi-Fi est différent du mot de passe d'administration du routeur.
+       Le mot de passe du Wi-Fi de la So'Box peut être modifié pour vous faciliter la connexion en choisissant un mot de passe plus facile à mémoriser. 
+       Cependant choisissez un mot de passe complexe qui comportera des majuscules, minuscule, chiffres et caractères spéciaux si vous souhaitez sécuriser l'accès à votre So'Box.
+  
+  utter_preciser_probleme:
+  - text: "Pourriez-vous me preciser si le probleme concerne soit votre connexion mobile soit votre SoBox. "
+
+  ##sobox fibre--------
+  utter_faq/sobox_fibre_description:
+  - text: |
+            Avec La Fibre Optique, Orange vous propose une nouvelle technologie performante qui vous permet d’avoir une expérience de  navigation unique.
+            Qu’est-ce que la Sobox Fibre 100% Fibre d’Orange ? 
+            La So'box Fibre 100% Fibre est une offre internet Orange Mali qui permet au client d’avoir une connexion très haut débit en illimité 24h/24 avec des débits allant jusqu’à 100 Mbps.
+            Très rapide, sécurisé et stable. L’offre est disponible pour les particuliers qui se trouvent dans une zone éligible. Trois offres sont actuellement proposées :
+            - Une offre Essentiel de 10Mbps
+            - Une offre Confort à 40 Mbps 
+            - Une offre Premium à 100 Mbps.
+
+  utter_faq/sobox_fibre_fonctionnalites:
+  - text: | 
+          La fibre Sobox dispose des caracteristiques suivantes : 
+          1-
+
+  utter_faq/sobox_fibre_offres:
+  - text: | 
+            L’offre est disponible pour les particuliers qui se trouvent dans une zone éligible. Trois offres sont actuellement proposées :
+            Une offre Essentiel de 10Mbps
+            Une offre Confort à 40 Mbps 
+            Une offre Premium à 100 Mbps.
+
+
+  utter_faq/sobox_fibre_eligibilite:
+  - text: "Avec le test d'éligibilité de la Fibre, testez rapidement, 
+           en quelques clics si votre logement se trouve dans une zone 
+           ayant accès au réseau Internet très haut débit d'Orange.
+           Rendez-vous sur le lien [https://eligibilitefibre.orangemali.com/] pour tester
+           votre eligibilite"
+
+  utter_faq/sobox_fibre_debit:
+  - text: "Le debit de la So'Box fibre est de 10M bps pour l'offre Essentiel,
+           40Mbps pour l'offre Confort et de 100 Mbps pour l'offre premium."
+
+  #offres mobile
+  utter_faq/mobile_description:
+  - text: |
+          Avec les forfaits Internet Mobile prépayés, vous pouvez accéder à Internet à partir de 100FCFA. 
+          Les forfaits sont cumulables. 
+          Il existe 3 gammes de forfaits internet prépayés adaptés à vos besoins : 
+          Forfaits Jour 
+          Forfaits Semaine 
+          Forfaits Mois 
+          Aussi vous pouvez directement souscrire à un forfait via l'application Orange Max it Mali ou par USSD #101#212# et OMY#144#33#."    
+
+  # Problemes et support internet
+  utter_faq/probleme_internet_mobile:
+  - text: |
+          Si vous rencontrez des problemes de connexion internet mobile, essayez ces etapes suivantes : 
+          1 - Verifier d'abord si vous du forfait internet et qu'il n'est pas expire;
+          2 - Verifier les parametres de configuration de votre smartphone. Cela se trouve generalement dans les parametres;
+
+  utter_faq/probleme_internet_sobox:
+  - text: |
+          Si vous rencontrez des problemes de connexion internet de votre SoBox, essayez ces etapes suivantes : 
+          1 - Verifier d'abord le boitier du routeur, si le voyant est de couleur.... 
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

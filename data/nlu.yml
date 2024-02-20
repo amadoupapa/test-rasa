@@ -1,0 +1,448 @@
+version: "3.1"
+
+nlu:
+
+- lookup: offre
+  examples: |
+    - internet mobile
+    - connexion mobile
+    - data mobile
+    - 4g
+    - 3g
+    - internet data
+    - so'box
+    - wifi orange
+    - wifi 
+    - wifi sobox
+    - wifi so'box
+
+
+#SALUTATION INTENT
+- intent: greet
+  examples: |
+    - coulby ?
+    - bonjour
+    - salut
+    - coucou
+    - bonsoir
+    - hey
+    - allo
+    - coucou toi
+    - salut là-bas
+    - bien le bonjour
+    - bonjour tout le monde
+    - salutations
+    - hello
+    - salut comment ça va
+    - hey, comment ça se passe ?
+    - salut l'ami
+    - hé, bonjour
+    - bonsoir à tous
+    - bonjour, comment ça marche ici ?
+    - salut, je besoin d'aide
+    - coucou, pouvez-vous m'assister ?
+    - hello, j'ai un problème
+    - salut, quelqu'un peut m'aider ?
+    - bonjour, j'ai une question
+    - salut là-bas, besoin de support
+    - hey, je suis perdu, pouvez-vous m'orienter ?
+    - bonjour, j'ai un souci, pouvez-vous aider ?
+    - salut, j'aurais besoin de quelques informations
+    - hello, est-ce que quelqu'un peut me guider ?
+    - bonjour, comment puis-je obtenir de l'aide ?
+    - salut, je cherche à résoudre un problème
+    - coucou, y a-t-il quelqu'un disponible pour discuter ?
+    - bonjour, j'aimerais parler à quelqu'un du service client
+    - salut, c'est possible d'avoir de l'assistance ici ?
+
+#QUITTER CONVERSATION
+- intent: goodbye
+  examples: |
+    - au revoir
+    - à bientôt
+    - adieu
+    - à la prochaine
+    - bonne journée
+    - à plus tard
+    - je me retire
+    - ciao
+    - à tout à l'heure
+    - à demain
+    - passez une bonne journée
+    - je m'en vais
+    - c'est tout pour moi
+    - je vous laisse
+    - bye
+    - goodbye
+    - c'était plaisant, merci
+    - merci pour votre aide
+    - à la revoyure
+    - prenez soin de vous
+    - bonsoir
+    - à la prochaine fois
+    - c'était utile, merci
+    - passez une excellente journée
+    - je m'en vais maintenant
+    - c'est tout ce dont j'avais besoin
+    - à la prochaine, au revoir
+    - je vous quitte ici
+
+- intent: thanks
+  examples: |
+    - merci
+    - merci pour votre aide
+    - c'était utile, merci
+    - d'accord, c'est compris
+    - ok
+    - merci beaucoup
+    - tu es un geni
+    - merci coulby
+    - d'accord merci
+
+
+
+- intent: affirm
+  examples: |
+    - oui
+    - exact
+    - tout à fait
+    - tout à fait d'accord
+    - bien sûr
+    - bien entendu
+    - c'est ça
+    - absolument
+    - correct
+    - tout à fait correct
+    - d'accord
+    - oui, c'est ça
+    - ouais
+    - tout bon
+    - tout à fait vrai
+    - affirmatif
+    - exactement
+    - totalement
+    - ça marche
+    - certainement
+    - ça sonne bien
+    - indubitablement
+    - ça me semble bien
+    - c'est exact
+    - assurément
+    - parfaitement
+    - en effet
+    - bien sûr que oui
+    - ça me semble correct
+
+
+- intent: deny
+  examples: |
+    - n
+    - non
+    - jamais
+    - pas du tout
+    - je ne pense pas
+    - je n'aime pas ça
+    - aucune chance
+    - vraiment pas
+    - négatif
+    - non, merci
+    - pas vraiment
+    - pas d'accord
+    - je refuse
+    - plutôt pas
+    - loin de là
+    - sans façon
+    - je ne suis pas d'accord
+    - ça ne me convient pas
+    - pas question
+    - certainement pas
+    - je n'en veux pas
+    - impossible
+    - c'est faux
+    - je dis non
+    - pas aujourd'hui
+    - ça ne marche pas pour moi
+    - désolé, mais non
+    - je ne suis pas intéressé
+    - je ne veux pas
+    - je ne suis pas sûr
+
+
+- intent: mood_great
+  examples: |
+    - bien
+    - bien et toi ?
+    - parfait
+    - génial
+    - incroyable
+    - je me sens comme un roi
+    - merveilleux
+    - je me sens très bien
+    - je vais bien
+    - je suis incroyable
+    - je vais sauver le monde
+    - super enthousiaste
+    - extrêmement bien
+    - tellement parfait
+    - tellement bien
+    - si parfait
+
+- intent: mood_unhappy
+  examples: |
+    - ma journée a été horrible
+    - je suis triste
+    - je ne me sens pas très bien
+    - je suis déçu
+    - super triste
+    - je suis tellement triste
+    - triste
+    - très triste
+    - malheureux
+    - pas bien
+    - pas très bien
+    - extrêmement triste
+    - tellement triste
+    - si triste
+
+- intent: bot_challenge
+  examples: |
+    - tu es qui ?
+    - qui es tu ?
+    - qui es-tu ? 
+    - es-tu un bot ?
+    - tu es humain ?
+    - es-tu un humain ?
+    - est-ce que je parle à un robot ?
+    - est-ce que je parle à un humain ?
+
+# Pas satisfait de la reponse 
+- intent: dissatisfaction_feedback
+  examples: |
+    - Je ne suis pas satisfait de la réponse que j'ai reçue.
+    - La réponse n'était pas utile du tout.
+    - Cela n'a pas résolu mon problème.
+    - La réponse était confuse.
+    - Je ne suis pas content de l'assistance que j'ai obtenue.
+    - La solution proposée ne fonctionne pas pour moi.
+    - Ce n'était pas ce à quoi je m'attendais.
+    - La réponse était imprécise.
+    - Je suis déçu de l'aide que j'ai reçue.
+    - Ça n'a pas répondu à ma question.
+
+- intent: faq/sobox_change_password
+  examples: |
+    - Comment changer mon mot de passe [Sobox Fibre](offre) ?
+    - Quelle est la procédure pour modifier mon mot de passe Sobox ?
+    - Je veux changer mon mot de passe [Sobox Fibre](offre), comment faire ?
+    - Pouvez-vous m'expliquer comment mettre à jour mon mot de passe Sobox ?
+    - Changer le mot de passe [Sobox](offre), s'il vous plaît.
+    - J'ai besoin d'aide pour changer mon mot de passe [Sobox Fibre](offre).
+    - Est-ce que vous pouvez me guider sur la façon de changer le mot de passe de ma Sobox ?
+    - Comment puis-je mettre à jour mon mot de passe pour [Sobox Fibre](offre) ?
+    - Quelles étapes dois-je suivre pour changer le mot de passe de ma Sobox ?
+    - Je ne sais pas comment changer mon mot de passe [Sobox](offre), pouvez-vous aider ?
+    - Mot de passe oublié, comment le réinitialiser pour [Sobox Fibre](offre) ?
+    - Besoin d'aide pour changer mon MDP [Sobox Fibre](offre).
+    - Comment on fait pour changer le mot de passe de Sobox ?
+    - Sobox mot de passe, changement, expliquez-moi.
+    - MDP [Sobox Fibre](offre), modification, guidez-moi, s'il vous plaît.
+    - Pouvez-vous m'aider à changer ma Sobox mot de passe ?
+    - SOS mot de passe ! Comment faire pour le changer sur [Sobox Fibre](offre) ?
+    - [Sobox Fibre](offre), changer le mot de passe, help me!
+    - Mot de passe oublié [Sobox](offre), quelles démarches suivre ?
+    - Comment réinitialiser le mot de passe de ma [Sobox Fibre](offre) ?
+    - Oublié mot de passe, comment puis-je le mettre à jour pour [Sobox Fibre](offre) ?
+    - Besoin de changer mon mot de passe sur [Sobox](offre), où puis-je le faire ?
+    - Aidez-moi à changer mon mot de passe [Sobox](offre), je suis bloqué.
+    - Comment changer mon mot de passe sur [Sobox Fibre](offre) sans problème ?
+    - J'ai égaré mon mot de passe [Sobox](offre), comment le récupérer ?
+    - [Sobox Fibre](offre), mot de passe perdu, que dois-je faire ?
+    - Guidez-moi pour changer mon mot de passe [Sobox](offre), s'il vous plaît.
+    - Mot de passe oublié sur [Sobox Fibre](offre), comment le restaurer ?
+    - Comment mettre à jour mon mot de passe [Sobox Fibre](offre) en toute sécurité ?
+    - [Sobox Fibre](offre), mot de passe, modification, expliquez simplement.
+
+- intent: probleme_internet
+  examples: |
+    - ma connexion internet ne marche pas
+    - j'ai un probleme de connexion
+    - le reseaux ne marche pas 
+    - j'ai pas access a internet
+    - rien ne fonctionne
+    - internet indisponible
+
+- intent: faq/probleme_internet_mobile
+  examples: |
+    - ma connexion internet [mobile](offre) ne marche pas
+    - j'ai un probleme de connexion [mobile](offre)
+    - le reseaux ne marche pas sur mon telephone [mobile](offre)
+    - j'ai pas access a internet sur mon telephone [mobile](offre)
+    - internet indisponible sur mon telephone
+    - comment regler probleme internet sur mon telephone
+
+- intent: faq/probleme_internet_sobox
+  examples: |
+    - Ma connexion internet [sobox](offre) ne marche pas
+    - J'ai un probleme de connexion [sobox](offre)
+    - Le reseaux ne marche pas sur ma [sobox](offre)
+    - J'ai pas access a internet sur mon telephone [mobile](offre)
+    - Internet indisponible sur mon wifi
+    - wifi ne marche pas
+    - Comment regler probleme internet de mon wifi
+    - connexion wifi ne marche pas
+
+
+# informer sur origine du probleme  
+- intent: informer_offre
+  examples: |
+    - [mobile]{"entity": "offre", "value": "mobile"}
+    - [sobox]{"entity": "offre", "value": "sobox"}
+    - [fibre]{"entity": "offre", "value": "sobox"}
+    - [4g]{"entity": "offre", "value": "mobile"}
+    - [mon telephone]{"entity": "offre", "value": "mobile"}
+    - ca concerne le [mobile]{"entity": "offre", "value": "mobile"}
+    - ca concerne ca la [sobox]{"entity": "offre", "value": "sobox"}
+    
+
+# DEFINITION DES SYNONYMES
+- synonym: sobox
+  examples: |
+    - so'box
+    - wifi orange
+    - wifi 
+    - wifi sobox
+    - wifi so'box
+    - Wi-Fi
+    - connexion wifi
+    - intenet sobox
+- synonym: fibre
+  examples: |
+    - so'box fibre
+    - wifi fibre
+    - wifi orange fibre
+    - wifi sobox fibre
+    - wifi so'box
+    - Wi-Fi
+    - connexion wifi
+    - intenet sobox fibre
+    - fibre orange
+
+- synonym: mobile
+  examples: |
+    - internet mobile
+    - connexion mobile
+    - data mobile
+    - 4g
+    - 3g
+    - internet data
+    - smartphone
+    - telephone
+
+- synonym: internet
+  examples: |
+    - connexion
+
+- synonym: debit
+  examples: |
+    - vitesse
+    - vitesse de connexion
+    - vitesse de telechargement
+
+
+# Sobox fibre------------------
+- intent: faq/sobox_fibre_description
+  examples: |
+    - Qu'est-ce que la [SoBox Fibre](offre) ?
+    - Quelles sont les caractéristiques de la [SoBox Fibre](offre) ?
+    - Comment fonctionne la [SoBox Fibre](offre) ?
+    - Explique-moi ce qu'est exactement la [SoBox Fibre](offre).
+    - Quelles fonctionnalités sont incluses dans la [SoBox Fibre](offre) ?
+    - Pourriez-vous me donner un aperçu détaillé de la [SoBox Fibre](offre) ?
+    - Décrivez-moi les spécificités techniques de la [SoBox Fibre](offre).
+    - Parlez-moi des avantages de la [SoBox Fibre](offre) par rapport aux autres offres.
+    - Quelles sont les principales caractéristiques techniques de la [SoBox Fibre](offre) ?
+    - Donnez-moi une vue d'ensemble complète de la [SoBox Fibre](offre).
+    - Comment la [SoBox Fibre](offre) se distingue-t-elle des autres solutions sur le marché ?
+    - Pouvez-vous détailler les services inclus dans l'offre [SoBox Fibre](offre) ?
+    - Expliquez-moi comment la [SoBox Fibre](offre) améliore l'expérience utilisateur.
+    - Quels sont les débits de connexion proposés par la [SoBox Fibre](offre) ?
+    - Parlez-moi de la stabilité de la connexion avec la [SoBox Fibre](offre).
+    - Comment la [SoBox Fibre](offre) gère-t-elle la sécurité des données ?
+    - Quelles sont les options de personnalisation disponibles avec la [SoBox Fibre](offre) ?
+    - Pourriez-vous me parler de la compatibilité de la [SoBox Fibre](offre) avec d'autres appareils ?
+    - Décrivez les fonctionnalités avancées de la [SoBox Fibre](offre).
+    - Comment puis-je bénéficier au maximum des services de la [SoBox Fibre](offre) ?
+    - Quelles garanties sont offertes avec la [SoBox Fibre](offre) ?
+    - Expliquez-moi comment la [SoBox Fibre](offre) prend en charge les périphériques intelligents.
+    - Parlez-moi des options de support technique disponibles pour la [SoBox Fibre](offre).
+    - Comment la [SoBox Fibre](offre) gère-t-elle la confidentialité des utilisateurs ?
+    - Quelles sont les options de personnalisation disponibles avec la [SoBox Fibre](offre) ?
+    - Donnez-moi une vue d'ensemble des tarifs associés à la [SoBox Fibre](offre).
+    - Expliquez-moi comment la [SoBox Fibre](offre) contribue à une expérience de streaming fluide.
+    - [sobox fibre](offre) de orange
+    - [fibre](offre) orange
+
+- intent: faq/sobox_fibre_offres
+  examples: |
+    - Quelles sont les offres [SoBox Fibre](offre) disponibles ?
+    - Quel est le prix des offres [SoBox Fibre](offre) ?
+    - Quelles sont les vitesses de connexion disponibles avec les offres [SoBox Fibre](offre) ?
+    - Quels sont les avantages des offres [SoBox Fibre](offre) ?
+
+- intent: faq/sobox_fibre_souscription
+  examples: |
+    - Comment souscrire à une offre [SoBox Fibre](offre) ?
+    - Quels sont les documents nécessaires pour souscrire à une offre [SoBox Fibre](offre) ?
+    - Quand vais-je recevoir ma [SoBox Fibre](offre) ?
+    - Comment activer mon abonnement [SoBox Fibre](offre) ?
+
+- intent: faq/sobox_fibre_installation
+  examples: |
+    - Comment installer ma [SoBox Fibre](offre) ?
+    - Quels sont les outils nécessaires pour installer ma [SoBox Fibre](offre) ?
+    - Combien de temps faut-il pour installer ma [SoBox Fibre](offre) ?
+    - Puis-je installer la [SoBox Fibre](offre) moi-même ?
+
+- intent: faq/sobox_fibre_configuration
+  examples: |
+    - Comment configurer ma [SoBox Fibre](offre) ?
+    - Comment connecter ma [SoBox Fibre](offre) à mon ordinateur ?
+    - Comment connecter ma [SoBox Fibre](offre) à ma télévision ?
+    - Comment changer le mot de passe Wi-Fi de ma [SoBox Fibre](offre) ?
+
+- intent: faq/sobox_fibre_difference_sobox_fixe
+  examples: |
+    - Quelle est la différence entre la [SoBox Fibre](offre) et la [SoBox Fixe](offre) ?
+    - Quelles sont les avantages de la [SoBox Fibre](offre) par rapport à la [SoBox Fixe](offre) ?
+
+- intent: faq/sobox_fibre_debit
+  examples: |
+    - Quelle est la vitesse de connexion maximale de la [SoBox Fibre](offre) ?
+    - Quelle est la vitesse de connexion minimale de la [SoBox Fibre](offre) ?
+    - Comment tester la vitesse de ma connexion [SoBox Fibre](offre) ?
+    - Quel est le debit de la [fibre](offre)
+
+- intent: faq/sobox_fibre_fonctionnalites
+  examples: |
+    - Quelles sont les fonctionnalités de la [SoBox Fibre](offre) ?
+    - Comment utiliser les fonctionnalités de la [SoBox Fibre](offre) ?
+    - La [SoBox Fibre](offre) a-t-elle un antivirus intégré ?
+
+- intent: faq/mobile_description
+  examples: |
+    - (mobile)(offre)
+    - internet [mobile](offre)
+    - les offres [mobiles](offre)
+    - connexion [mobile](offre) 
+    - Quelles sont vos offres internet mobiles ?
+
+
+- intent: faq/sobox_fibre_eligibilite
+  examples: |
+    - Comment puis-je savoir si la [SoBox Fibre](offre) est disponible dans ma région ?
+    - Quelles sont les zones éligibles pour l'offre [SoBox Fibre](offre) ?
+    - Y a-t-il des restrictions géographiques pour la [SoBox Fibre](offre) ?
+    - Suis-je eligible ?
+    - La fibre est disponible dans ma region ?
+    - Disponible dans notre zone ?
+    - eligible ?

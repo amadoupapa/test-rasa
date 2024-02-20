@@ -1,0 +1,99 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask for help after greet 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_help
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_rephrase
+
+# toujours de demander
+# - rule: Toujours demander feedback apres sobox_change_password intent
+#   steps:
+#   - intent: sobox_change_password
+#   - action: utter_sobox_change_password
+#   - action: utter_did_that_help
+
+# - rule: Toujours demander feedback apres sobox_change_password intent
+#   steps:
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_that_helped
+
+# #
+# - rule: Toujours repondre sobox_fibre_description intent
+#   steps:
+#   - intent: sobox_fibre_description
+#   - action: utter_sobox_fibre_description
+  
+
+# - rule: Toujours repondre intention eligibilite
+#   steps:  
+#   - intent: sobox_fibre_eligibilite
+#   - action: utter_sobox_fibre_eligibilite
+
+# - rule: Toujours repondre intention sobox_fibre_offres
+#   steps:  
+#   - intent: sobox_fibre_offres
+#   - action: utter_sobox_fibre_offres
+
+# - rule: Toujours repondre intention sobox_fibre_debit 
+#   steps:
+#   - intent: sobox_fibre_vitesse_connexion
+#   - action: utter_sobox_fibre_debit 
+
+
+- rule: Ask for help after greet 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_help
+
+- rule: Toujours repondre intention thanks 
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Toujours demamder origine probleme internet
+  steps:
+  - intent: probleme_internet
+  - action: utter_preciser_probleme
+  
+- rule: Toujours demamder origine probleme internet
+  steps:
+  - action: utter_preciser_probleme  
+  - intent: informer_offre
+  - action: action_extract_offre_entity
+
+- rule: repondre aux faqs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+
+# - rule: Toujours repondre  probleme internet mobile
+#   steps:
+#   - intent: probleme_internet_mobile 
+#   - action: utter_probleme_internet_mobile 
+
+# - rule: Toujours repondre  probleme internet sobox
+#   steps:
+#   - intent: probleme_internet_sobox 
+#   - action: utter_probleme_internet_sobox
+

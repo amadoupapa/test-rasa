@@ -1,0 +1,87 @@
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+  
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# Storie de probleme de connexion sans preciser type offres
+- story: probleme internet
+  steps:
+  - intent: probleme_internet
+  - action: utter_preciser_probleme
+  - intent: informer_offre
+  - action: action_extract_offre_entity
+  
+
+- story: support sobox_change_password path 1
+  steps:
+  - intent: sobox_change_password
+  - action: utter_sobox_change_password
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_that_helped
+  - intent: deny
+  - action: utter_no_questions
+
+# sobox fibre stories
+- story: sobox_fibre_description_path 1
+  steps:
+  - intent: sobox_fibre_description
+  - action: utter_sobox_fibre_description 
+  - intent: sobox_fibre_offres
+  - action: utter_sobox_fibre_offres
+  - intent: sobox_fibre_eligibilite
+  - action: utter_sobox_fibre_eligibilite
+  - intent: thanks
+  - action: utter_thanks
+
+
+- story: sobox_fibre_description_path 2
+  steps:
+  - intent: sobox_fibre_description
+  - action: utter_sobox_fibre_description 
+  
+
+- story: sobox_fibre_description_path 3
+  steps:
+  - intent: sobox_fibre_description
+  - action: utter_sobox_fibre_description 
+  - intent: sobox_fibre_offres
+  - action: utter_sobox_fibre_offres 
+
+- story: sobox_fibre_offres_path 1
+  steps:
+  - intent: sobox_fibre_offres
+  - action: utter_sobox_fibre_offres 
+  - intent: sobox_fibre_eligibilite
+  - action: utter_sobox_fibre_eligibilite
+  - intent: sobox_fibre_description
+  - action: utter_sobox_fibre_description 
+
+ 
