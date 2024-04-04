@@ -5,7 +5,7 @@ USER root
 # WORKDIR /app
 # COPY . /app
 COPY ./data /app/data
-RUN  rasa train
+#RUN  rasa train
 VOLUME /app
 VOLUME /app/data
 VOLUME /app/models
