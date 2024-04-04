@@ -55,7 +55,7 @@ secrets.tar
 test_download.zip
 bower_components/
 build/lib/
-/models/
+#/models/
 node_modules/
 npm-debug.log
 examples/moodbot/py3/
